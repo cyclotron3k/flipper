@@ -1,0 +1,24 @@
+{
+	"content_scripts": [{
+		"js":      [ "flipper.js" ],
+		"matches": [ "http://*/*", "https://*/*" ],
+		"run_at":  "document_end"
+	}],
+	"description": "Switch YouTube flash to iframes",
+	"icons": {
+		"16":  "icon_16.png",
+		"48":  "icon_48.png",
+		"128": "icon_128.png"
+	},
+	"page_action": {
+		"default_icon": "icon_16.png"
+	},
+	"manifest_version": 2,
+	"name": "Flipper",
+	"permissions": [ "http://*/*" ],
+	"version": "0.1",
+	"background": {
+		"scripts": [ "background.js" ],
+		"persistent": false
+	}
+}
